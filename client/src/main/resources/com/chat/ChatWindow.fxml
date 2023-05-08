@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="563.0" prefWidth="898.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.chat.ChatController">
+   <top>
+      <BorderPane fx:id="borderPane" prefHeight="101.0" prefWidth="898.0" BorderPane.alignment="CENTER">
+         <left>
+            <HBox prefHeight="101.0" prefWidth="245.0" BorderPane.alignment="CENTER">
+               <children>
+                  <ImageView fx:id="userImageView" fitHeight="69.0" fitWidth="59.0" pickOnBounds="true" preserveRatio="true" rotate="-0.9">
+                     <image>
+                        <Image url="@../images/default.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets left="20.0" top="20.0" />
+                     </HBox.margin>
+                  </ImageView>
+                  <VBox prefHeight="101.0" prefWidth="127.0">
+                     <children>
+                        <Label fx:id="usernameLabel" text="username" textFill="#ff8000">
+                           <font>
+                              <Font name="Century Gothic" size="20.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets left="10.0" top="30.0" />
+                           </VBox.margin>
+                        </Label>
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+         </left>
+         <right>
+            <HBox prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Button fx:id="close" mnemonicParsing="false" onAction="#cancelbuttonOnAction" style="-fx-background-color: #031c30;" text="X" textFill="WHITE">
+                     <HBox.margin>
+                        <Insets left="140.0" top="10.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+            </HBox>
+         </right>
+         <bottom>
+            <Line endX="100.0" startX="-798.2063598632812" startY="0.45956751704216003" BorderPane.alignment="CENTER" />
+         </bottom>
+      </BorderPane>
+   </top>
+   <left>
+      <VBox prefHeight="462.0" prefWidth="226.0" style="-fx-border-image-width: 0; -fx-background-color: #e0e0e0;" BorderPane.alignment="CENTER">
+         <children>
+            <ListView fx:id="userList" prefHeight="473.0" prefWidth="226.0" />
+         </children>
+      </VBox>
+   </left>
+   <center>
+      <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+         <children>
+            <ScrollPane prefHeight="424.0" prefWidth="672.0">
+               <content>
+                  <ListView fx:id="chatPane" prefHeight="351.0" prefWidth="659.0" />
+               </content>
+            </ScrollPane>
+            <HBox prefHeight="77.0" prefWidth="672.0">
+               <children>
+                  <TextArea fx:id="msgBox" prefHeight="56.0" prefWidth="447.0" promptText="Enter Message..." />
+                  <Button fx:id="send" mnemonicParsing="false" onAction="#sendButton" prefHeight="78.0" prefWidth="111.0" style="-fx-background-color: #031c30;" text="Send" textFill="WHITE" />
+                  <Button fx:id="voiceRecord" minWidth="53.0" mnemonicParsing="false" onAction="#voiceButton" prefHeight="58.0" prefWidth="53.0" style="-fx-background-color: #ffaeff5d;" text="Voice" />
+                  <Button fx:id="uploadButton" mnemonicParsing="false" prefHeight="56.0" prefWidth="63.0" style="-fx-background-color: #ffff5dd6;" text="十" textAlignment="CENTER" textFill="#090909">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </center>
+</BorderPane>

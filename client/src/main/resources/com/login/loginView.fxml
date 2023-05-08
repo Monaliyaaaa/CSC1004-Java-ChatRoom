@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="364.0" prefWidth="610.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.login.LoginController">
+   <children>
+      <TextField fx:id="username" layoutX="240.0" layoutY="67.0" prefHeight="33.0" prefWidth="168.0" />
+      <PasswordField fx:id="password" layoutX="240.0" layoutY="118.0" prefHeight="33.0" prefWidth="168.0" />
+      <Label layoutX="94.0" layoutY="62.0" prefHeight="33.0" prefWidth="114.0" text="Username">
+         <font>
+            <Font name="Berlin Sans FB" size="21.0" />
+         </font>
+      </Label>
+      <Label fx:id="loginMessage" layoutX="222.0" layoutY="172.0" prefHeight="15.0" prefWidth="299.0" text="Sorry, please check your username and password." textFill="RED" visible="false" />
+      <Label layoutX="94.0" layoutY="122.0" prefHeight="25.0" prefWidth="97.0" text="Password">
+         <font>
+            <Font name="Berlin Sans FB" size="21.0" />
+         </font>
+      </Label>
+      <Button fx:id="cancelbutton" layoutX="288.0" layoutY="226.0" mnemonicParsing="false" onAction="#cancelbuttonOnAction" prefHeight="45.0" prefWidth="168.0" text="Cancel">
+         <font>
+            <Font name="Berlin Sans FB" size="20.0" />
+         </font></Button>
+      <Button fx:id="loginbutton" layoutX="85.0" layoutY="226.0" mnemonicParsing="false" onAction="#loginbuttonOnAction" prefHeight="45.0" prefWidth="168.0" text="Login">
+         <font>
+            <Font name="Berlin Sans FB" size="20.0" />
+         </font>
+      </Button>
+      <Button fx:id="registerbutton" layoutX="493.0" layoutY="249.0" mnemonicParsing="false" onAction="#registerbuttonOnAction" scaleShape="false" text="Register">
+         <font>
+            <Font name="Berlin Sans FB" size="12.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>
